@@ -1,22 +1,66 @@
-:root{
-    
+:root {
+    --cor-sucesso: #28a745;
+    --cor-sucesso-hover: #218838;
+    --cor-erro: #dc3545;
+    --cor-erro-hover: #c82333;
+    --cor-texto-branca: #ffffff;
+    --cor-fundo: #f4f4f9;
+    --fonte: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body{
-    font-family: Arial;
-    background-color: #f4f4f4;
+body {
+    font-family: var(--fonte);
+    background-color: var(--cor-fundo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
-button{
-    padding: 10px;
+.container {
+    text-align: center;
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.botoes-wrapper {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 25px;
     border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
 }
-.success{
-    background-color: green;
-    color: white;
+
+button:active {
+    transform: scale(0.98);
 }
-.danger{
-    background-color: red;
-    color: white;
+
+.success {
+    background-color: var(--cor-sucesso);
+    color: var(--cor-texto-branca);
+}
+
+.success:hover {
+    background-color: var(--cor-sucesso-hover);
+}
+
+.danger {
+    background-color: var(--cor-erro);
+    color: var(--cor-texto-branca);
+}
+
+.danger:hover {
+    background-color: var(--cor-erro-hover);
 }
